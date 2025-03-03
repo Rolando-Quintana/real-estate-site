@@ -23,8 +23,8 @@ function ContactForm() {
         "service_wtrugaf",
         "template_nglcp5t",
         {
-          name: formData.name,
-          email: formData.email,
+          from_name: formData.name,
+          to_name: Romy,
           message: formData.message,
         },
         "UtCZ-8d4_Ht9XhNxI"
