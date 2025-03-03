@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react"; // Removed useRef since it's not needed
 import emailjs from "@emailjs/browser";
 
 function ContactForm() {
@@ -8,7 +8,6 @@ function ContactForm() {
     message: "",
   });
   const [status, setStatus] = useState("");
-  const form = useRef();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,24 +17,30 @@ function ContactForm() {
     e.preventDefault();
     
     // Log form data for debugging
-    console.log("Form data:", formData);
-    console.log("Form reference:", form.current);
+    console.log("Submitting form data:", formData);
 
     emailjs
-      .sendForm(
+      .send(
         "service_wtrugaf",    // Your Service ID
         "template_nglcp5t",   // Your Template ID
-        form.current,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },                    // Form data object
         "UtCZ-8d4_Ht9XhNxI"   // Your Public Key
       )
       .then(
         (result) => {
-          console.log("Success:", result.text);
+          console.log("EmailJS Success Response:", result);
+          console.log("Status:", result.status);
+          console.log("Text:", result.text);
           setStatus("Message sent successfully!");
           setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
-          console.error("Error:", error.text);
+          console.error("EmailJS Error:", error);
+          console.log("Error Text:", error.text);
           setStatus("Failed to send message: " + error.text);
         }
       );
@@ -71,7 +76,7 @@ function ContactForm() {
   };
 
   return (
-    <form ref={form} onSubmit={handleSubmit} style={formStyle}>
+    <form onSubmit={handleSubmit} style={formStyle}> {/* Removed ref={form} */}
       <input
         type="text"
         name="name"
