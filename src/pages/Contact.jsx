@@ -14,15 +14,18 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      "service_wtrugaf",  // Replace with your EmailJS Service ID
-      "template_nglcp5t", // Replace with your EmailJS Template ID
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,  
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, 
       form.current,
-      "yUtCZ-8d4_Ht9XhNxI"   // Replace with your EmailJS Public Key
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY   
     )
-    .then((result) => {
+    .then(() => {
       setStatus("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" }); // Reset form
-    }, (error) => {
+      setTimeout(() => setStatus(""), 5000); // Hide message after 5 seconds
+    })
+    .catch((error) => {
+      console.error("Email send error:", error);
       setStatus("Failed to send message. Please try again.");
     });
   };
@@ -40,9 +43,6 @@ const Contact = () => {
     </div>
   );
 };
-
-export default Contact;
-
 
 const styles = {
   container: {
