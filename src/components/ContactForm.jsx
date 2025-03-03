@@ -7,35 +7,41 @@ function ContactForm() {
     email: "",
     message: "",
   });
-
-  const [status, setStatus] = useState(""); // Success/Error message
+  const [status, setStatus] = useState("");
   const form = useRef();
 
-  // Handle input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitting form:", formData); // Check if this logs
-    emailjs.sendForm(
-      "service_wtrugaf",  // Replace with your EmailJS Service ID
-      "template_nglcp5t", // Replace with your EmailJS Template ID
-      form.current,
-      "UtCZ-8d4_Ht9XhNxI"   // Replace with your EmailJS Public Key
-    )
-    .then(() => {
-      setStatus("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" }); // Reset form
-    })
-    .catch(() => {
-      setStatus("Failed to send message. Please try again.");
-    });
+    
+    // Log form data for debugging
+    console.log("Form data:", formData);
+    console.log("Form reference:", form.current);
+
+    emailjs
+      .sendForm(
+        "service_wtrugaf",    // Your Service ID
+        "template_nglcp5t",   // Your Template ID
+        form.current,
+        "UtCZ-8d4_Ht9XhNxI"   // Your Public Key
+      )
+      .then(
+        (result) => {
+          console.log("Success:", result.text);
+          setStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error("Error:", error.text);
+          setStatus("Failed to send message: " + error.text);
+        }
+      );
   };
 
-  // Styles
+  // Styles (unchanged)
   const formStyle = {
     display: "flex",
     flexDirection: "column",
@@ -66,10 +72,35 @@ function ContactForm() {
 
   return (
     <form ref={form} onSubmit={handleSubmit} style={formStyle}>
-      <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required style={inputStyle} />
-      <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required style={inputStyle} />
-      <textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} required style={inputStyle} />
-      <button type="submit" style={buttonStyle}>Send</button>
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+        style={inputStyle}
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+        style={inputStyle}
+      />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        value={formData.message}
+        onChange={handleChange}
+        required
+        style={{ ...inputStyle, minHeight: "100px" }}
+      />
+      <button type="submit" style={buttonStyle}>
+        Send
+      </button>
       {status && <p>{status}</p>}
     </form>
   );
