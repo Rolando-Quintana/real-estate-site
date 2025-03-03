@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState(""); // Status message
+  const form = useRef();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -9,14 +12,26 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Message sent!");
-    setFormData({ name: "", email: "", message: "" });
+
+    emailjs.sendForm(
+      "service_wtrugaf",  // Replace with your EmailJS Service ID
+      "template_nglcp5t", // Replace with your EmailJS Template ID
+      form.current,
+      "yUtCZ-8d4_Ht9XhNxI"   // Replace with your EmailJS Public Key
+    )
+    .then((result) => {
+      setStatus("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" }); // Reset form
+    }, (error) => {
+      setStatus("Failed to send message. Please try again.");
+    });
   };
 
   return (
     <div style={styles.container}>
       <h2 style={styles.heading}>Contact Us</h2>
-      <form onSubmit={handleSubmit} style={styles.form}>
+      {status && <p style={styles.status}>{status}</p>}
+      <form ref={form} onSubmit={handleSubmit} style={styles.form}>
         <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required style={styles.input} />
         <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required style={styles.input} />
         <textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} required style={styles.textarea}></textarea>
@@ -25,6 +40,9 @@ const Contact = () => {
     </div>
   );
 };
+
+export default Contact;
+
 
 const styles = {
   container: {
