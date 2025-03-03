@@ -19,7 +19,7 @@ function ContactForm() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log("Submitting form:", formData); // Check if this logs
     emailjs.sendForm(
       "service_wtrugaf",  // Replace with your EmailJS Service ID
       "template_nglcp5t", // Replace with your EmailJS Template ID
