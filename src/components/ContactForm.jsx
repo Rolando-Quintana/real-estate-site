@@ -24,7 +24,7 @@ function ContactForm() {
       "service_wtrugaf",  // Replace with your EmailJS Service ID
       "template_nglcp5t", // Replace with your EmailJS Template ID
       form.current,
-      "yUtCZ-8d4_Ht9XhNxI"   // Replace with your EmailJS Public Key
+      "UtCZ-8d4_Ht9XhNxI"   // Replace with your EmailJS Public Key
     )
     .then(() => {
       setStatus("Message sent successfully!");
