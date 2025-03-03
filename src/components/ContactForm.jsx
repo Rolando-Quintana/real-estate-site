@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
-  // State to store user input
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const [status, setStatus] = useState(""); // Success/Error message
+  const form = useRef();
 
   // Handle input changes
   const handleChange = (e) => {
@@ -16,8 +19,20 @@ function ContactForm() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Message sent! We will get back to you soon.");
+
+    emailjs.sendForm(
+      "service_wtrugaf",  // Replace with your EmailJS Service ID
+      "template_nglcp5t", // Replace with your EmailJS Template ID
+      form.current,
+      "yUtCZ-8d4_Ht9XhNxI"   // Replace with your EmailJS Public Key
+    )
+    .then(() => {
+      setStatus("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" }); // Reset form
+    })
+    .catch(() => {
+      setStatus("Failed to send message. Please try again.");
+    });
   };
 
   // Styles
@@ -49,16 +64,15 @@ function ContactForm() {
     cursor: "pointer",
   };
 
-  // ✅ Make sure return is inside the function
   return (
-    <form onSubmit={handleSubmit} style={formStyle}>
+    <form ref={form} onSubmit={handleSubmit} style={formStyle}>
       <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required style={inputStyle} />
       <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required style={inputStyle} />
       <textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} required style={inputStyle} />
       <button type="submit" style={buttonStyle}>Send</button>
+      {status && <p>{status}</p>}
     </form>
   );
 }
 
-// ✅ Make sure the export is at the end
 export default ContactForm;
