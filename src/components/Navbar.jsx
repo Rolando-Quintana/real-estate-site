@@ -7,7 +7,7 @@ const Navbar = () => {
       <div style={styles.navContainer}>
         <div style={styles.logoContainer}>
           <Link to="/">
-            <img src="/inveluxlogo.jpg" alt="Logo" style={styles.logo} />
+            <img src="/images/inveluxlogo.jpg" alt="Logo" style={styles.logo} />
           </Link>
         </div>
         <div style={styles.navLinks}>
