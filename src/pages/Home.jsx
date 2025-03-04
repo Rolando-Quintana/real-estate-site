@@ -7,7 +7,7 @@ const Home = () => {
       {/* Main Content (Text on the Left) */}
       <div style={styles.mainContent}>
         <h1 style={styles.heading}>Find Your Dream Home</h1>
-        <p style={styles.subtext}>Your perfect home is just a click away.</p>
+        <p style={styles.subtext}>"Helping families find their dream homes with trust, dedication, and expert guidance—your perfect home is just a call away! With years of experience in Miami, we know the market inside and out, making buying or selling smooth and stress-free. Your goals are our priority; we listen, guide, and deliver results. Looking to buy or sell? Contact us today!"</p>
 
         {/* Find Your Dream Home Button */}
         <Link to="/listings" style={styles.button}>
@@ -87,7 +87,7 @@ const styles = {
     width: "450px", // Slightly increase the image size for balance
     borderRadius: "15px", // Increase radius for a smoother look
     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)", // Add subtle shadow for depth
-    marginRight: "40px",
+    marginRight: "20px",
   },
   footer: {
     position: "absolute",
