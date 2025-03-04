@@ -68,7 +68,7 @@ const styles = {
   },
   button: {
     display: "inline-block",
-    marginTop: "30px",
+    marginTop: "20px",
     padding: "15px 30px",
     backgroundColor: "#007BFF", // Blue background
     color: "white",
@@ -84,7 +84,7 @@ const styles = {
     backgroundColor: "#0056b3", // Darker blue for hover effect
   },
   realtorImage: {
-    width: "450px", // Slightly increase the image size for balance
+    width: "400px", // Slightly increase the image size for balance
     borderRadius: "15px", // Increase radius for a smoother look
     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)", // Add subtle shadow for depth
     marginRight: "20px",
