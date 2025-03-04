@@ -24,7 +24,7 @@ function ContactForm() {
         "template_nglcp5t",
         {
           from_name: formData.name,
-          to_name: Romy,
+          to_name:"Romy",
           message: formData.message,
         },
         "UtCZ-8d4_Ht9XhNxI"
