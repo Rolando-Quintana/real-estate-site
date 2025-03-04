@@ -13,7 +13,7 @@ const Home = () => {
       </div>
 
       {/* Realtor Image (On the Right) */}
-      <img src="/images/romy.png" alt="Realtor" style={styles.realtorImage} />
+      <img src="/images/romyinvelux.jpg" alt="Realtor" style={styles.realtorImage} />
 
       {/* Footer with Instagram Link */}
       <footer style={styles.footer}>
@@ -56,7 +56,7 @@ const styles = {
     marginTop: "10px",
   },
   realtorImage: {
-    width: "400px",
+    width: "500px",
     borderRadius: "10px",
     marginRight: "50px",
   },

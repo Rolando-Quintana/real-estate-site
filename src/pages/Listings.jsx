@@ -4,24 +4,24 @@ const Listings = () => {
   const listings = [
     {
       id: 1,
-      title: "Beautiful Family Home",
-      img: "/images/home1.jpg",
+      title: "Address",
+      img: "/images/luxuriousapartment.jpg",
       link: "https://www.zillow.com/homedetails/1",
-      description: "A spacious 4-bedroom home with a modern kitchen and backyard.",
+      description: "Description of listing",
     },
     {
       id: 2,
-      title: "Luxury Apartment",
+      title: "Address",
       img: "/images/home2.jpg",
       link: "https://www.zillow.com/homedetails/2",
-      description: "A high-rise apartment with stunning city views and top amenities.",
+      description: "Description of listing",
     },
     {
       id: 3,
-      title: "Cozy Suburban House",
+      title: "Address",
       img: "/images/home3.jpg",
       link: "https://www.zillow.com/homedetails/3",
-      description: "A charming house in a quiet neighborhood with great schools nearby.",
+      description: "Description of listing",
     },
   ];
 
