@@ -55,15 +55,16 @@ const styles = {
     flex: "1",
     textAlign: "left",
     paddingLeft: "50px",
-    maxWidth: "50%", // Limit the width for better readability
+    maxWidth: "50%",
+    marginTop:"10px" // Limit the width for better readability
   },
   heading: {
     fontSize: "56px", // Increase font size for more impact
     fontWeight: "bold",
     marginBottom: "10px",
     padding:"10px 20px",
-    border:"4px solid white",
     display:"inline-block",
+    marginTop:"0"
   },
   subtext: {
     fontSize: "24px", // Increase size for better legibility
