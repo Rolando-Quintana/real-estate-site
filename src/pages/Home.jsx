@@ -1,15 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 const Home = () => {
   return (
     <div style={styles.container}>
-      {/* Logo in the Top Right */}
-      <img src="/images/logo.png" alt="Company Logo" style={styles.logo} />
-
       {/* Main Content (Text on the Left) */}
       <div style={styles.mainContent}>
         <h1 style={styles.heading}>Find Your Dream Home</h1>
         <p style={styles.subtext}>Your perfect home is just a click away.</p>
+
+        {/* Find Your Dream Home Button */}
+        <Link to="/listings" style={styles.button}>
+          Find Your Dream Home Today!
+        </Link>
       </div>
 
       {/* Realtor Image (On the Right) */}
@@ -48,12 +51,6 @@ const styles = {
     flexDirection: "row", // Align items horizontally
     boxSizing: "border-box",
   },
-  logo: {
-    position: "absolute",
-    top: "20px",
-    right: "20px",
-    width: "120px",
-  },
   mainContent: {
     flex: "1",
     textAlign: "left",
@@ -68,6 +65,23 @@ const styles = {
   subtext: {
     fontSize: "24px", // Increase size for better legibility
     marginTop: "10px",
+  },
+  button: {
+    display: "inline-block",
+    marginTop: "30px",
+    padding: "15px 30px",
+    backgroundColor: "#007BFF", // Blue background
+    color: "white",
+    textAlign: "center",
+    fontSize: "18px",
+    fontWeight: "bold",
+    textDecoration: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+    transition: "background-color 0.3s",
+  },
+  buttonHover: {
+    backgroundColor: "#0056b3", // Darker blue for hover effect
   },
   realtorImage: {
     width: "450px", // Slightly increase the image size for balance
@@ -91,3 +105,4 @@ const styles = {
 };
 
 export default Home;
+
