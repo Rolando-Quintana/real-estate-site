@@ -26,6 +26,7 @@ function ContactForm() {
           from_name: formData.name,
           to_name:"Romy",
           message: formData.message,
+          reply_to:formData.email,
         },
         "UtCZ-8d4_Ht9XhNxI"
       )
