@@ -17,8 +17,18 @@ const Home = () => {
 
       {/* Footer with Instagram Link */}
       <footer style={styles.footer}>
-        <p>Follow us on <a href="https://www.instagram.com/invelux.realty/" target="_blank" rel="noopener noreferrer" style={styles.instagramLink}>Instagram</a></p>
-      <p>Based in Miami,FL</p>
+        <p>
+          Follow us on{" "}
+          <a
+            href="https://www.instagram.com/invelux.realty/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.instagramLink}
+          >
+            Instagram
+          </a>
+        </p>
+        <p>Based in Miami, FL</p>
       </footer>
     </div>
   );
@@ -35,6 +45,8 @@ const styles = {
     color: "white",
     fontFamily: "Arial, sans-serif",
     position: "relative",
+    flexDirection: "row", // Align items horizontally
+    boxSizing: "border-box",
   },
   logo: {
     position: "absolute",
@@ -44,21 +56,24 @@ const styles = {
   },
   mainContent: {
     flex: "1",
-    textAlign: "left", // Align text to the left
+    textAlign: "left",
     paddingLeft: "50px",
+    maxWidth: "50%", // Limit the width for better readability
   },
   heading: {
-    fontSize: "48px",
+    fontSize: "56px", // Increase font size for more impact
     fontWeight: "bold",
+    marginBottom: "10px",
   },
   subtext: {
-    fontSize: "20px",
+    fontSize: "24px", // Increase size for better legibility
     marginTop: "10px",
   },
   realtorImage: {
-    width: "400px",
-    borderRadius: "10px",
-    marginRight: "50px",
+    width: "450px", // Slightly increase the image size for balance
+    borderRadius: "15px", // Increase radius for a smoother look
+    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)", // Add subtle shadow for depth
+    marginRight: "40px",
   },
   footer: {
     position: "absolute",
@@ -66,6 +81,7 @@ const styles = {
     left: "50%",
     transform: "translateX(-50%)",
     textAlign: "center",
+    fontSize: "14px", // Smaller footer text
   },
   instagramLink: {
     color: "#E1306C",
