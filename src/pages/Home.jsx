@@ -40,16 +40,16 @@ const Home = () => {
 const styles = {
   container: {
     display: "flex",
-    justifyContent: "space-between", // Text on left, Image on right
-    alignItems: "center",
-    height: "100vh",
-    padding: "40px",
-    backgroundColor: "black",
-    color: "white",
-    fontFamily: "Arial, sans-serif",
-    position: "relative",
-    flexDirection: "row", // Align items horizontally
-    boxSizing: "border-box",
+  justifyContent: "space-between",
+  alignItems: "center",
+  height: "100vh",
+  padding: "0 40px", // Remove top padding
+  backgroundColor: "black",
+  color: "white",
+  fontFamily: "Arial, sans-serif",
+  position: "relative",
+  flexDirection: "row",
+  boxSizing: "border-box",
   },
   mainContent: {
     flex: "1",
