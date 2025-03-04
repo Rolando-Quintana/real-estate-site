@@ -61,6 +61,9 @@ const styles = {
     fontSize: "56px", // Increase font size for more impact
     fontWeight: "bold",
     marginBottom: "10px",
+    padding:"10px 20px",
+    border:"4px solid white",
+    display:"inline-block",
   },
   subtext: {
     fontSize: "24px", // Increase size for better legibility
