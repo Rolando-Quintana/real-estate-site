@@ -76,7 +76,7 @@ function ContactForm() {
         type="text"
         name="name"
         placeholder="Your Email"
-        value={formData.name}
+        value={formData.email}
         onChange={handleChange}
         required
         style={inputStyle}
@@ -85,7 +85,7 @@ function ContactForm() {
         type="email"
         name="email"
         placeholder="Your Name"
-        value={formData.email}
+        value={formData.name}
         onChange={handleChange}
         required
         style={inputStyle}
