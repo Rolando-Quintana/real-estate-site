@@ -35,7 +35,7 @@ const styles = {
     margin: "0 auto",
   },
   logoContainer: {
-    width: "100px", // Adjust based on your logo width
+    width: "200px", // Adjust based on your logo width
     marginLeft: "20px",
   },
   logo: {
