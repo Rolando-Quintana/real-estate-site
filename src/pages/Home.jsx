@@ -56,7 +56,7 @@ const styles = {
     marginTop: "10px",
   },
   realtorImage: {
-    width: "500px",
+    width: "400px",
     borderRadius: "10px",
     marginRight: "50px",
   },
