@@ -39,7 +39,7 @@ const styles = {
     marginLeft: "20px",
   },
   logo: {
-    height: "40px",
+    height: "100px",
     width: "auto",
   },
   navLinks: {
