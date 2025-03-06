@@ -6,7 +6,7 @@ const Listings = () => {
       id: 1,
       title: "Address",
       img: "/images/luxuriousapartment.jpg",
-      link: "https://www.zillow.com/homedetails/1",
+      link: "https://sef.mlsmatrix.com/matrix/shared/Mkbpll0MyXf/1643BrickellAve",
       description: "Description of listing",
     },
     {
@@ -43,7 +43,7 @@ const Listings = () => {
               rel="noopener noreferrer"
               style={styles.button}
             >
-              View on Zillow
+              View listing
             </a>
           </div>
         </div>
