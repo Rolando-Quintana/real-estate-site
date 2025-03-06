@@ -12,8 +12,8 @@ const Listings = () => {
     {
       id: 2,
       title: "Address",
-      img: "/images/home2.jpg",
-      link: "https://www.zillow.com/homedetails/2",
+      img: "/images/casa.jpg",
+      link: "https://sef.mlsmatrix.com/matrix/shared/Nx5MNccRyXf/14749SW9thSt",
       description: "Description of listing",
     },
     {
