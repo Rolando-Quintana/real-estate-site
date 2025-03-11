@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar"; // ✅ Keep your Navbar
 import Home from "./pages/Home";
 import Listings from "./pages/Listings";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy"; // ✅ Import Privacy Policy
+import TermsOfService from "./pages/TermsOfService"; // ✅ Import Terms of Service
 
 function App() {
   return (
