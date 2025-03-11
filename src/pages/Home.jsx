@@ -20,19 +20,29 @@ const Home = () => {
 
       {/* Footer with Instagram Link */}
       <footer style={styles.footer}>
-        <p>
-          Follow us on{" "}
-          <a
-            href="https://www.instagram.com/invelux.realty/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={styles.instagramLink}
-          >
-            Instagram
-          </a>
-        </p>
-        <p>Based in Miami, FL</p>
-      </footer>
+  <p>
+    Follow us on{" "}
+    <a
+      href="https://www.instagram.com/invelux.realty/"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={styles.instagramLink}
+    >
+      Instagram
+    </a>
+  </p>
+  <p>Based in Miami, FL</p>
+  <p>© {new Date().getFullYear()} Your Real Estate Business. All rights reserved.</p>
+  <div>
+    <Link to="/privacy-policy" style={{ color: "white", textDecoration: "underline", marginRight: "10px" }}>
+      Privacy Policy
+    </Link>
+    <Link to="/terms-of-service" style={{ color: "white", textDecoration: "underline" }}>
+      Terms of Service
+    </Link>
+  </div>
+</footer>
+
     </div>
   );
 };
