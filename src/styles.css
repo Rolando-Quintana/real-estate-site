@@ -1,31 +1,40 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  main {
-    max-width: 900px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  footer {
-    margin-top: 20px;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('/images/background%20for%20real%20estate.jpg') center/cover no-repeat; /* Background Image */
+  color: white; /* White text for better contrast */
+  min-height: 100vh; /* Ensure full-page height */
+  box-sizing: border-box; /* Consistent box sizing */
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Navigation links */
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white; /* Ensure nav links are visible */
+}
+
+/* Main content container */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background for readability */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer styling */
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
