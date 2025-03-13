@@ -8,12 +8,20 @@ const Home = () => {
       <div style={styles.mainContent}>
         <h1 style={styles.heading}>Find Your Dream Home</h1>
         <p style={styles.subtext}>
-          "Helping families find their dream homes with trust, dedication, and
-          expert guidance—your perfect home is just a call away! With years of
-          experience in Miami, we know the market inside and out, making buying
-          or selling smooth and stress-free. Your goals are our priority; we
-          listen, guide, and deliver results. Looking to buy or sell? Contact us
-          today!"
+        María Romy Jiménez
+Founder & Principal Broker, Invelux Realty LLC
+
+With over a decade of experience in Florida’s dynamic real estate market, María Romy Jiménez is a trusted advisor and dedicated advocate for clients navigating complex property transactions. As the founder and principal broker of Invelux Realty LLC, Romy has built a reputation for delivering exceptional results by combining her industry expertise, strategic insights, and client-first approach.
+
+A proud Bolivian-American based in Miami, Florida, Romy’s deep understanding of the region’s real estate landscape allows her to serve a diverse clientele, including sellers, buyers, investors, property owners, and tenants. Her extensive experience spans residential, commercial, and investment properties, positioning her as a versatile leader in the industry.
+
+Romy earned her degree in Business Administration in 2010, equipping her with the strategic acumen to excel in negotiations and deliver data-driven insights. Her background in the legal field and previous collaborations with real estate professionals have strengthened her ability to manage transactions with precision and ensure seamless closings.
+
+Driven by her entrepreneurial spirit, Romy founded Invelux Realty LLC to provide clients with personalized guidance and tailored solutions. Her mission is clear: to empower clients with the knowledge and resources they need to make informed decisions. Romy takes pride in understanding each client’s unique goals and developing customized strategies to help them achieve optimal outcomes.
+
+Whether working with first-time homebuyers, seasoned investors, or international clients, Romy’s commitment to transparency, communication, and professional integrity ensures her clients feel supported at every step.
+
+For those seeking a knowledgeable and results-driven partner in Florida’s real estate market, María Romy Jiménez and her team at Invelux Realty LLC deliver a service experience defined by expertise, dedication, and success.
         </p>
 
         {/* Find Your Dream Home Button */}
