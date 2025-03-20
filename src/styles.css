@@ -1,43 +1,40 @@
-/* Slideshow Container */
-.slideshow-container {
-  position: fixed; /* Covers the entire screen */
-  top: 0;
-  left: 0;
-  width: 100vw; /* Ensure it takes the full viewport width */
-  height: 100vh; /* Ensure it takes the full viewport height */
-  z-index: -1; /* Keeps it behind other content */
-  overflow: hidden; 
-}
-
-/* Individual Slide */
-.slide {
-  position: absolute;
-  width: 100vw; /* Cover full width */
-  height: 100vh; /* Cover full height */
-  background-size: cover;
-  background-position: center;
-  opacity: 0; /* Hidden by default */
-  transition: opacity 1.5s ease-in-out; /* Smooth fade-in/out transition */
-}
-
-/* Active Slide */
-.slide.active {
-  opacity: 1 !important; /* Ensure active slide is visible */
-}
-
-/* Body Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: url('/images/background%20for%20real%20estate.jpg') center/cover no-repeat; /* Background Image */
   color: white; /* White text for better contrast */
   min-height: 100vh; /* Ensure full-page height */
   box-sizing: border-box; /* Consistent box sizing */
-  overflow: hidden; /* Prevent scroll caused by slideshow */
 }
 
-/* Ensure content is above slideshow */
-header, main, footer {
-  position: relative;
-  z-index: 10; /* Keep above the background */
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Navigation links */
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white; /* Ensure nav links are visible */
+}
+
+/* Main content container */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background for readability */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer styling */
+footer {
+  margin-top: 20px;
+  text-align: center;
 }
