@@ -1,15 +1,17 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar"; // ✅ Keep your Navbar
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Listings from "./pages/Listings";
 import Contact from "./pages/Contact";
-import PrivacyPolicy from "./pages/PrivacyPolicy"; // Import Privacy Policy Page
-import TermsOfService from "./pages/TermsOfService"; // Import Terms of Service Page
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import Slideshow from "./components/Slideshow"; // ✅ Import the Slideshow component
 
 function App() {
   return (
     <div>
-      <Navbar /> {/* ✅ Keep the Navbar at the top */}
+      <Navbar /> {/* Keep the Navbar at the top */}
+      <Slideshow /> {/* ✅ Add the Slideshow under the Navbar */}
       <main style={{ padding: "20px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
