@@ -5,7 +5,7 @@ import Listings from "./pages/Listings";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
-import slideshow from "./components/slideshow"; // ✅ Import the Slideshow component
+import Slideshow from "./components/slideshow"; // ✅ Import the Slideshow component
 
 function App() {
   return (
