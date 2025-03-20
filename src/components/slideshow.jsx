@@ -23,20 +23,15 @@ const Slideshow = () => {
 
   return (
     <div className="slideshow-container">
-      {images.map((image, index) => {
-        console.log(`Rendering slide ${index}, Active: ${index === current}`);
-        return (
-          <div
-            key={index}
-            className={`slide ${index === current ? "active" : ""}`}
-            style={{ backgroundImage: `url(${image})` }}
-          />
-        );
-      })}
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`slide ${index === current ? "active" : ""}`}
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      ))}
     </div>
   );
-  
 };
 
 export default Slideshow;
-
