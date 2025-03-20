@@ -3,19 +3,17 @@
   position: fixed; /* Covers the entire screen */
   top: 0;
   left: 0;
-  width: 100vw; /* Ensure full viewport width */
-  height: 100vh; /* Ensure full viewport height */
+  width: 100vw; /* Ensure it takes the full viewport width */
+  height: 100vh; /* Ensure it takes the full viewport height */
   z-index: -1; /* Keeps it behind other content */
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 /* Individual Slide */
 .slide {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  width: 100vw; /* Cover full width */
+  height: 100vh; /* Cover full height */
   background-size: cover;
   background-position: center;
   opacity: 0; /* Hidden by default */
@@ -24,7 +22,7 @@
 
 /* Active Slide */
 .slide.active {
-  opacity: 1 !important; /* Ensure only the active slide is visible */
+  opacity: 1 !important; /* Ensure active slide is visible */
 }
 
 /* Body Styling */
@@ -35,42 +33,11 @@ body {
   color: white; /* White text for better contrast */
   min-height: 100vh; /* Ensure full-page height */
   box-sizing: border-box; /* Consistent box sizing */
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow: hidden; /* Prevent scroll caused by slideshow */
 }
 
-/* Header Styling */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  position: relative; /* Ensure header is above the slideshow */
+/* Ensure content is above slideshow */
+header, main, footer {
+  position: relative;
   z-index: 10; /* Keep above the background */
-}
-
-/* Navigation Links */
-nav a {
-  text-decoration: none;
-  font-weight: bold;
-  color: white; /* Ensure nav links are visible */
-}
-
-/* Main Content Container */
-main {
-  max-width: 900px;
-  margin: 20px auto;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background for readability */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  position: relative; /* Ensure content is above slideshow */
-  z-index: 5; /* Keep content above slides */
-}
-
-/* Footer Styling */
-footer {
-  margin-top: 20px;
-  text-align: center;
-  position: relative; /* Ensure footer stays above background */
-  z-index: 5; /* Above slideshow */
 }
