@@ -8,15 +8,18 @@ const images = [
 ];
 
 const Slideshow = () => {
+  console.log("Slideshow component is rendering"); // ✅ Check if component renders
+
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
+      console.log("Current index:", current); // ✅ Check if index updates
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [current]);
 
   return (
     <div className="slideshow-container">
@@ -32,3 +35,4 @@ const Slideshow = () => {
 };
 
 export default Slideshow;
+
